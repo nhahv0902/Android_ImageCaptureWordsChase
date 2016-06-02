@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < SIZE_ANSWER; i++) {
             mListBtnAnswer[i].setVisibility(View.VISIBLE);
             mListBtnQuestion[i].setVisibility(View.VISIBLE);
-
+            mListBtnAnswer[i].setBackground(getResources().getDrawable(R.drawable.tile_answer));
             mListBtnAnswer[i].setEnabled(true);
             mListBtnQuestion[i].setEnabled(true);
 
@@ -222,13 +222,20 @@ public class MainActivity extends AppCompatActivity {
                 if (mAnswer.toLowerCase().equals(mQuestion.getName().toLowerCase())) {
                     getToast(getString(R.string.answer_correct));
                     Log.d(TAG, mAnswer);
+                    for (int i = 0; i < mSize; i++) {
+                        mListBtnAnswer[i].setBackground(getResources().getDrawable(R.drawable.tile_true));
+                    }
                     mBtnNext.setVisibility(View.VISIBLE);
                     int point = Integer.parseInt(mTxtPoint.getText().toString()) + 100;
                     mTxtPoint.setText(point + "");
 
                 } else {
-                    getToast(getString(R.string.answer_un_correct));
 
+                    for (int i = 0; i < mSize; i++) {
+                        mListBtnAnswer[i].setBackground(getResources().getDrawable(R.drawable.tile_false));
+                    }
+
+                    getToast(getString(R.string.answer_un_correct));
                     int point = Integer.parseInt(mTxtLive.getText().toString()) - 1;
 
                     mTxtLive.setText(point + "");
@@ -247,6 +254,4 @@ public class MainActivity extends AppCompatActivity {
     private void getToast(String string) {
         Toast.makeText(MainActivity.this, string, Toast.LENGTH_SHORT).show();
     }
-
-
 }
