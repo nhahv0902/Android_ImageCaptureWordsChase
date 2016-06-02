@@ -2,6 +2,7 @@ package com.nhahv.imagecapturewordschase.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -17,6 +18,11 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int SIZE_IMAGE = 30;
     private static final int SIZE_ANSWER = 16;
+
+    private static final int MAX_ASCII = 91;
+    private static final int MIN_ASCII = 65;
+
+    private int mSize;
 
     private final String TAG = getClass().getSimpleName();
 
@@ -36,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         initViews();
 
+        setListBtnQuestion();
     }
 
     private void initViews() {
@@ -107,11 +114,42 @@ public class MainActivity extends AppCompatActivity {
         Random random = new Random();
         int index = random.nextInt(SIZE_IMAGE);
         Question question = mListQuestion.get(index);
-        int size = question.getName().length();
+        mSize = question.getName().length();
 
+        for (int i = mSize; i < SIZE_ANSWER; i++) {
+            mListBtnAnswer[i].setVisibility(View.INVISIBLE);
+        }
 
+        String string = question.getName().toLowerCase();
+        int size = string.length();
+
+        for (int i = 0; i < size; i++) {
+            char c = string.charAt(i);
+            int in = (int) c;
+            Log.d(TAG, (in % 16) + " - ");
+            int indexBtnQuestion = checkButtonEmpty(in % SIZE_ANSWER);
+            String  text = c + "";
+            mListBtnQuestion[indexBtnQuestion].setText(text);
+        }
+
+        for (int i = 0; i < SIZE_ANSWER; i++) {
+            if (mListBtnQuestion[i].getText().toString().equals("")) {
+                int in = new Random().nextInt(MAX_ASCII - MIN_ASCII) + MIN_ASCII;
+                String text = (char) in + "";
+                mListBtnQuestion[i].setText(text);
+            }
+        }
 
     }
+
+    private int checkButtonEmpty(int i) {
+        if (mListBtnQuestion[i].getText().toString().equals("")) {
+            return i;
+        } else {
+            return checkButtonEmpty(i + 1);
+        }
+    }
+
 
     private class Events implements View.OnClickListener {
         @Override
