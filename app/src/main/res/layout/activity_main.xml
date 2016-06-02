@@ -25,15 +25,27 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true" />
 
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/include"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/next"
+        android:text="@string/next"
+        android:textColor="@android:color/white"
+        android:visibility="invisible" />
+
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_below="@+id/include"
+        android:layout_below="@+id/btn_next"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="5dp">
 
         <ImageView
+            android:id="@+id/image_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerInside"
@@ -65,6 +77,7 @@
         android:layout_gravity="bottom"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="40dp" />
+        android:layout_marginTop="20dp" />
+
 
 </RelativeLayout>

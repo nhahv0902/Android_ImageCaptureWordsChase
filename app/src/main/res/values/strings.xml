@@ -3,4 +3,7 @@
     <string name="play">Play</string>
     <string name="live">5</string>
     <string name="point">1200</string>
+    <string name="next">Next</string>
+    <string name="answer_correct">Ban da tra loi dung</string>
+    <string name="answer_un_correct">ban tra loi sai</string>
 </resources>
