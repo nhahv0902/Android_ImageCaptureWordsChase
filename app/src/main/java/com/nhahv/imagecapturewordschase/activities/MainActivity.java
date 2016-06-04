@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.nhahv.imagecapturewordschase.R;
+import com.nhahv.imagecapturewordschase.app.MyApplication;
 import com.nhahv.imagecapturewordschase.models.Models;
 import com.nhahv.imagecapturewordschase.models.Question;
 
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private int getIdOfImageByName(String name) {
-        return getResources().getIdentifier(name, "drawable", getPackageName());
+        return getResources().getIdentifier(name, MyApplication.DRAWABLE, getPackageName());
     }
 
     /**
@@ -135,7 +136,6 @@ public class MainActivity extends AppCompatActivity {
 
         mIndexAnswer = 0;
         mAnswer = "";
-
 
         for (int i = 0; i < SIZE_ANSWER; i++) {
             mListBtnAnswer[i].setVisibility(View.VISIBLE);
@@ -195,10 +195,12 @@ public class MainActivity extends AppCompatActivity {
     private class Events implements View.OnClickListener {
         @Override
         public void onClick(View v) {
+
+            int index = v.getId() - R.id.image_question01;
+
             if (v.getId() == R.id.btn_next) {
                 onClickNextQuestion();
-            } else {
-                int index = v.getId() - R.id.image_question01;
+            } else if (index >= 0 && index <= 16) {
                 setOnClickBtnQuestion(index);
             }
         }
@@ -221,7 +223,6 @@ public class MainActivity extends AppCompatActivity {
 
                 if (mAnswer.toLowerCase().equals(mQuestion.getName().toLowerCase())) {
                     getToast(getString(R.string.answer_correct));
-                    Log.d(TAG, mAnswer);
                     for (int i = 0; i < mSize; i++) {
                         mListBtnAnswer[i].setBackground(getResources().getDrawable(R.drawable.tile_true));
                     }

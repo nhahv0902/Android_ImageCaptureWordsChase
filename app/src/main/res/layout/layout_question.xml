@@ -6,125 +6,112 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/image_question01"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/tile_hover" />
 
         <Button
             android:id="@+id/image_question02"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/tile_hover" />
 
         <Button
             android:id="@+id/image_question03"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/tile_hover" />
 
         <Button
             android:id="@+id/image_question04"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/tile_hover" />
 
         <Button
             android:id="@+id/image_question05"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/tile_hover" />
 
         <Button
             android:id="@+id/image_question06"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/tile_hover" />
 
         <Button
             android:id="@+id/image_question07"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/tile_hover" />
 
         <Button
             android:id="@+id/image_question08"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/tile_hover" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/image_question11"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
             android:background="@drawable/tile_hover" />
 
         <Button
             android:id="@+id/image_question12"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
             android:background="@drawable/tile_hover" />
 
         <Button
             android:id="@+id/image_question13"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
             android:background="@drawable/tile_hover" />
 
         <Button
             android:id="@+id/image_question14"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
             android:background="@drawable/tile_hover" />
 
         <Button
             android:id="@+id/image_question15"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
             android:background="@drawable/tile_hover" />
 
         <Button
             android:id="@+id/image_question16"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
             android:background="@drawable/tile_hover" />
 
         <Button
             android:id="@+id/image_question17"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
             android:background="@drawable/tile_hover" />
 
         <Button
             android:id="@+id/image_question18"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
             android:background="@drawable/tile_hover" />
     </LinearLayout>
 </LinearLayout>
